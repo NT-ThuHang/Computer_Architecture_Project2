@@ -1,0 +1,24 @@
+- Bien name, str, len, score, turn, WA
+- Biến kết quả lượt chơi result: 1 (thắng), 0 (thua)
+
+
+1. Nhập tên người dùng
+2. Lấy random chuỗi đề bài trong dethi.txt rồi in ra dưới dạng *** (Nhãn RandomQuestion) ko dc ra đề cũ
+N-de1-de2-de3
+3. Viết hàm đoán kí tự
+4. Viết hàm đoán đáp án
+5. Xuất trạng thái người chơi
+6. Xử lý phần kết quả lượt chơi: 
+- Thắng: Update điểm số và random đề khác để chơi tiếp (Nhảy đến nhãn RandomQuestion)
+- Thua cuộc: Xuất tên người chơi - điểm - số lượt chiến thắng. Lưu thông tin vào nguoichoi.txt (Mỗi user lưu thông tin trên 3 dòng: tên, điểm, số lượt). Lưu ý: Nếu user đã xuất hiện trong nguoichoi.txt thì chỉ lấy điểm số cao nhất để lưu lại.
+7. Xử lý phần kết thúc trò chơi: Xuất 10 người chơi có số điểm cao nhất. Tạo menu chọn: 
+	1. Tiếp tục chơi (nhảy đến nhãn RandomQuestion) 
+	2. Thoát trò chơi
+	
+1-4: Mai
+2-5: Nhân
+3: Thy
+6: Thìn
+7: Hằng
+
+Deadline: 10h 25/5
