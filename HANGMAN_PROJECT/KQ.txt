@@ -1,0 +1,390 @@
+***   ***        *****        ****     ***         ******	      ***        ***       *****       ***      ***
+***   ***       *** ***       *** *    ***       ***     *	      *** *    * ***      *** ***      *** *    ***
+*********      ***   ***      ***  *   ***      ***		      ***  *  *  ***     ***   ***     ***  *   ***
+***   ***     ***********     ***   *  ***      ***    ****	      ***   **   ***    ***********    ***   *  ***
+***   ***    ***       ***    ***    * ***       ***    ***           ***        ***   ***       ***   ***    * ***
+***   ***   ***		***   ***     ****   	   ********	      ***        ***  ***         ***  ***      ***
+
+===================================================================================================================
+
+Nhap ten nguoi choi: tttttt
+
+LEVEL: 0
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: -----n-
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: thuhang
+Past Level
+_________________________________________________________
+
+LEVEL: 1
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: xuanmai
+_________
+|/	|	   
+|	O
+|      /|\	
+|      / \
+|
+|
+|
+
+   ******         *****       ***        ***  *********        ********    ***        ***  *********  *********
+ ***     *       *** ***      *** *    * ***  ***   ***       ***    ***    ***      ***   ***   ***  ***   ***
+***	        ***   ***     ***  *  *  ***  *********      ***      ***    ***    ***    *********  *********
+***    ****    ***********    ***   **   ***  ***           ***        ***    ***  ***     ***        ***  ***
+ ***    ***   ***       ***   ***        ***  *********      ***      ***      ******      *********  ***   *** 
+   ********  ***	 ***  ***	 ***  *********        ********         ****       *********  ***    ***
+
+================================================================================================================
+
+Ten Nguoi Choi: tttttt
+Diem: 7
+So luot chien thanh: 1
+TOP 10
+THUHANG-19-3
+SnowMen-7-1
+tttttt-7-1
+Ban co muon tiep tuc( Chon 1 neu dong y, nguoc lai chon 2 de thoat)
+Chon: 1
+
+LEVEL: 0
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n----
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: minhthy
+Past Level
+_________________________________________________________
+
+LEVEL: 1
+Chuoi ki tu hien tai cua ban la: ---
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: 2
+Ki tu khong ton tai trong chuoi 
+_________
+|/	|	   
+|
+|
+|
+|
+|
+|
+
+Chuoi ki tu hien tai cua ban la: ---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Ki tu khong ton tai trong chuoi 
+_________
+|/	|	   
+|	O
+|
+|
+|
+|
+|
+
+Chuoi ki tu hien tai cua ban la: ---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: huu
+Past Level
+_________________________________________________________
+
+LEVEL: 2
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: ---n---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: xuanmai
+Past Level
+_________________________________________________________
+
+LEVEL: 3
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 2 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n---n
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: tanthin
+Past Level
+_________________________________________________________
+
+LEVEL: 4
+
+-- program is finished running (dropped off bottom) --
+
+***   ***        *****        ****     ***         ******	      ***        ***       *****       ***      ***
+***   ***       *** ***       *** *    ***       ***     *	      *** *    * ***      *** ***      *** *    ***
+*********      ***   ***      ***  *   ***      ***		      ***  *  *  ***     ***   ***     ***  *   ***
+***   ***     ***********     ***   *  ***      ***    ****	      ***   **   ***    ***********    ***   *  ***
+***   ***    ***       ***    ***    * ***       ***    ***           ***        ***   ***       ***   ***    * ***
+***   ***   ***		***   ***     ****   	   ********	      ***        ***  ***         ***  ***      ***
+
+===================================================================================================================
+
+Nhap ten nguoi choi: NTTH
+
+LEVEL: 0
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: -----n-
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: thuhang
+Past Level
+_________________________________________________________
+
+LEVEL: 1
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: ---n---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: minhthy
+_________
+|/	|	   
+|	O
+|      /|\	
+|      / \
+|
+|
+|
+
+   ******         *****       ***        ***  *********        ********    ***        ***  *********  *********
+ ***     *       *** ***      *** *    * ***  ***   ***       ***    ***    ***      ***   ***   ***  ***   ***
+***	        ***   ***     ***  *  *  ***  *********      ***      ***    ***    ***    *********  *********
+***    ****    ***********    ***   **   ***  ***           ***        ***    ***  ***     ***        ***  ***
+ ***    ***   ***       ***   ***        ***  *********      ***      ***      ******      *********  ***   *** 
+   ********  ***	 ***  ***	 ***  *********        ********         ****       *********  ***    ***
+
+================================================================================================================
+
+Ten Nguoi Choi: NTTH
+Diem: 8
+So luot chien thanh: 1
+TOP 10
+THUHANG-19-3
+NTTH-8-1
+tttttt-7-1
+SnowMen-7-1
+Ban co muon tiep tuc( Chon 1 neu dong y, nguoc lai chon 2 de thoat)
+Chon: 1
+
+LEVEL: 0
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: ---n---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: xuanmai
+Past Level
+_________________________________________________________
+
+LEVEL: 1
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: -----n-
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: thuhang
+Past Level
+_________________________________________________________
+
+LEVEL: 2
+Chuoi ki tu hien tai cua ban la: ---
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: huu
+Past Level
+_________________________________________________________
+
+LEVEL: 3
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 2 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n---n
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: tanthin
+Past Level
+_________________________________________________________
+
+LEVEL: 4
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n----
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: minhthy
+Past Level
+_________________________________________________________
+***    ***     ********    ***     ***  ***		  *** ***  ***      ***
+ ***  ***     ***    ***   ***     ***   ***             ***  ***  *** *    ***
+  ******     **        **  ***     ***    ***     *     ***   ***  ***  *   ***
+   ***       **        **  ***     ***     ***   ***   ***    ***  ***   *  ***
+   ***        ***    ***   ***********      *** *   * ***     ***  ***    * ***
+   ***         ********    ***********       ***     ***      ***  ***      ***
+
+==================================================================================
+Ban co muon tiep tuc( Chon 1 neu dong y, nguoc lai chon 2 de thoat)
+Chon: 1
+
+LEVEL: 0
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: ---n---
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: xuanmai
+Past Level
+_________________________________________________________
+
+LEVEL: 1
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n----
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: minhthy
+Past Level
+_________________________________________________________
+
+LEVEL: 2
+Chuoi ki tu hien tai cua ban la: ---
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: huu
+Past Level
+_________________________________________________________
+
+LEVEL: 3
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 1 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: -----n-
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: thuhang
+Past Level
+_________________________________________________________
+
+LEVEL: 4
+Chuoi ki tu hien tai cua ban la: -------
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 1
+
+Nhap ki tu doan: n
+Co 2 ki tu ton tai trong chuoi 
+Chuoi ki tu hien tai cua ban la: --n---n
+
+??? Doan ki tu chon 1, Doan chuoi chon 2 ??? {Exit game chon 3}
+Chon: 2
+
+Nhap chuoi doan: tanthin
+Past Level
+_________________________________________________________
+***    ***     ********    ***     ***  ***		  *** ***  ***      ***
+ ***  ***     ***    ***   ***     ***   ***             ***  ***  *** *    ***
+  ******     **        **  ***     ***    ***     *     ***   ***  ***  *   ***
+   ***       **        **  ***     ***     ***   ***   ***    ***  ***   *  ***
+   ***        ***    ***   ***********      *** *   * ***     ***  ***    * ***
+   ***         ********    ***********       ***     ***      ***  ***      ***
+
+==================================================================================
+Ban co muon tiep tuc( Chon 1 neu dong y, nguoc lai chon 2 de thoat)
+Chon: 2
+
+-- program is finished running --

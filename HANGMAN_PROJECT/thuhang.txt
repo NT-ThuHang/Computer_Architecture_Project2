@@ -1,0 +1,393 @@
+#dinh dangj file output
+#thuhang-110-5*minhthy-190-21*tanthin-910-21*huunha-1029-32*xuanmai-9021-31*thuhangnguyen-1-0*thuhang1-12-1*thuhang2-16-2*xmxm-16-2*
+#=====================================Docfile===========================================
+Docfile:
+	#dau thu tuc
+	addi $sp,$sp,-4
+	sw $ra,($sp)
+	addi $sp,$sp,-4
+	sw $s0,($sp)    #dia chi tap tin can doc fout
+	addi $sp,$sp,-4
+	sw $s1,($sp)    # dia chi chuoi tmp doc toan file
+	addi $sp,$sp,-4
+	sw $s2,($sp)	#dia chi mang user.score
+	addi $sp,$sp,-4
+	sw $s3,($sp)	#dia chi mang user.id
+	addi $sp,$sp,-4
+	sw $t0,($sp)	#bien tmp, co nghi khi $t0=1 doc duoc chuoi score cho den khi gap '-'
+	addi $sp,$sp,-4
+	sw $t1,($sp)     #bien tmp, doc tmp[i]
+	addi $sp,$sp,-4
+	sw $t2,($sp)	#so 10
+	addi $sp,$sp,-4
+	sw $t3,($sp)    # bien int cuar score
+	addi $sp,$sp,-4
+	sw $t4,($sp)	#bien int cuar id
+
+	#open file
+	li $v0,13
+	la $a0,fout
+	li $a1,0
+	li $a2,0
+	syscall
+	move $s0,$v0 # $s0 luu dia chi fout
+
+	#docfile
+	li $v0,14
+	move $a0,$s0
+	la $a1,tmp1
+	li $a2,10000
+	syscall
+	
+	#close file
+	li $v0,16
+	move $a0,$s0
+	syscall
+
+#xu li loc du lieu
+	la $s1,tmp1
+	la $s2,userScore
+	la $s3,userId
+	li $t0,0
+	li $t2,10
+	li $t3,0
+	li $t4,0
+Docfile.LocDuLieu:
+	lb $t1,($s1)
+	beq $t1,$zero,Docfile.end
+	beq $t1,'*',Docfile.KhoiTao
+	beq $t1,'-',Docfile.Tang_t0
+	beq $t0,1,Docfile.User_Score
+Docfile.TiepTuc:
+	addi $s1,$s1,1
+	j Docfile.LocDuLieu
+Docfile.Tang_t0:
+	addi $t0,$t0,1
+	j Docfile.TiepTuc
+Docfile.KhoiTao:
+	addi $t4,$t4,1
+	sw $t4,($s3)
+	addi $s3,$s3,4
+	sw $t3,($s2)
+	addi $s2,$s2,4
+	li $t0,0
+	li $t3,0
+	j Docfile.TiepTuc
+Docfile.User_Score:
+	addi $t1,$t1,-48
+	mult $t3,$t2
+	mflo $t3
+	add $t3,$t3,$t1
+	j Docfile.TiepTuc
+Docfile.end:
+	sw $t4,userLen
+	lw $t4,($sp)	#bien int cuar id
+	addi $sp,$sp,4
+	lw $t3,($sp)    # bien int cuar score
+	addi $sp,$sp,4
+	lw $t2,($sp)	#so 10
+	addi $sp,$sp,4
+	lw $t1,($sp)     #bien tmp, doc tmp[i]
+	addi $sp,$sp,4
+	lw $t0,($sp)	#bien tmp, co nghi khi $t0=1 doc duoc chuoi score cho den khi gap '-'
+	addi $sp,$sp,4
+	lw $s3,($sp)	#dia chi mang user.id
+	addi $sp,$sp,4
+	lw $s2,($sp)	#dia chi mang user.score
+	addi $sp,$sp,4
+	lw $s1,($sp)    # dia chi chuoi tmp doc toan file
+	addi $sp,$sp,4
+	lw $s0,($sp)    #dia chi tap tin can doc fout
+	addi $sp,$sp,4
+	lw $ra,($sp)
+	addi $sp,$sp,4
+	jr $ra
+#==================================================InsertionSort====================================================
+_SapXep:
+#dau thu tuc
+	addi $sp,$sp,-4
+	sw $ra,($sp)
+	addi $sp,$sp,-4
+	sw $s0,($sp) #user.len
+	addi $sp,$sp,-4
+	sw $s1,($sp) # user.score	
+	addi $sp,$sp,-4
+	sw $s2,($sp)#	user.score.tam
+	addi $sp,$sp,-4
+	sw $s3,($sp)# user.score[i]
+	addi $sp,$sp,-4
+	sw $s4,($sp)# user.score[j]
+	addi $sp,$sp,-4
+	sw $s5,($sp)# tmp
+	addi $sp,$sp,-4
+	sw $s6,($sp)#user.id
+	addi $sp,$sp,-4
+	sw $s7,($sp)#user.id tam
+	addi $sp,$sp,-4
+	sw $t0,($sp)# i
+	addi $sp,$sp,-4
+	sw $t1,($sp)# j
+	addi $sp,$sp,-4
+	sw $t2,($sp)#user.len-1
+	addi $sp,$sp,-4
+	sw $t3,($sp)# user.id[i]
+	addi $sp,$sp,-4
+	sw $t4,($sp)#user.id[j]
+#than thu tuc
+	#for (int i=0;i<n-1;i++)
+		#for (int j=i+1;j<n;j++)
+			#if (a[i]<a[j])
+				#Swap(a[i],a[j])
+	#Khoi tao vong lap
+	lw $s0,userLen
+	la $s1,userScore
+	la $s6,userId
+	li $t0,0
+	addi $t2,$s0,-1
+_SapXep.Lap:
+	lw $s3,($s1)
+	lw $t3,($s6)
+	la $s2,($s1)
+	la $s7,($s6)
+	move $t1,$t0
+_SapXep.Loop:
+	addi $s2,$s2,4
+	addi $s7,$s7,4
+	addi $t1,$t1,1
+	lw $s4,($s2)
+	lw $t4,($s7)
+	blt $s3,$s4,_SapXep.Swap
+	j Tiep
+_SapXep.Swap:
+	move $s5,$s3
+	move $s3,$s4
+	move $s4,$s5
+	sw $s3,($s1)
+	sw $s4,($s2)
+	move $s5,$t3
+	move $t3,$t4
+	move $t4,$s5
+	sw $t3,($s6)
+	sw $t4,($s7)
+	j Tiep
+Tiep:
+	blt $t1,$t2,_SapXep.Loop
+	#Gan tu gia tri i+1->n-1 tu $s2 vao $s1
+	la $s2,($s1)
+	la $s7,($s6)
+	move $t1,$t0
+Loop2:
+	addi $s2,$s2,4
+	addi $s1,$s1,4
+	addi $s6,$s6,4
+	addi $s7,$s7,4
+	addi $t1,$t1,1
+	lw $s4,($s2)
+	sw $s4,($s1)
+	lw $t4,($s7)
+	sw $t4,($s6)
+	blt $t1,$t2,Loop2
+	#Tra $s1 lai vi tri dang duyet
+	
+Loop3:
+	addi $s1,$s1,-4
+	addi $s6,$s6,-4
+	addi $t1,$t1,-1
+	blt $t0,$t1,Loop3
+
+	#tang gia tri duyet tiep
+	addi $s1,$s1,4
+	addi $s6,$s6,4
+	addi $t0,$t0,1
+	blt $t0,$t2,_SapXep.Lap
+	j end
+end:
+	lw $t4,($sp)#user.id[j]
+	addi $sp,$sp,4
+	lw $t3,($sp)# user.id[i]
+	addi $sp,$sp,4
+	lw $t2,($sp)#user.len-1
+	addi $sp,$sp,4
+	lw $t1,($sp)# j
+	addi $sp,$sp,4
+	lw $t0,($sp)# i
+	addi $sp,$sp,4
+	lw $s7,($sp)#user.id tam
+	addi $sp,$sp,4
+	lw $s6,($sp)#user.id
+	addi $sp,$sp,4
+	lw $s5,($sp)# tmp
+	addi $sp,$sp,4
+	lw $s4,($sp)# user.score[j]
+	addi $sp,$sp,4
+	lw $s3,($sp)# user.score[i]
+	addi $sp,$sp,4
+	lw $s2,($sp)#	user.score.tam
+	addi $sp,$sp,4
+	lw $s1,($sp) # user.score	
+	addi $sp,$sp,4
+	lw $s0,($sp) #user.len
+	addi $sp,$sp,4
+	lw $ra,($sp)
+	addi $sp,$sp,4
+	jr $ra
+#==============================================Xuat Danh Sach======================================
+XuatDanhSach:
+	#dau thu tuc
+	addi $sp,$sp,-4
+	sw $ra,($sp)
+	addi $sp,$sp,-4
+	sw $s0,($sp)	#dia chi fout
+	addi $sp,$sp,-4
+	sw $s1,($sp)	#chuoi tmp1
+	addi $sp,$sp,-4
+	sw $s2,($sp)	#mang userId
+	addi $sp,$sp,-4
+	sw $s3,($sp)	#mang userId
+	addi $sp,$sp,-4
+	sw $t0,($sp)	#bien dem '*'
+	addi $sp,$sp,-4
+	sw $t1,($sp)	#userLen
+	addi $sp,$sp,-4
+	sw $t2,($sp)	#bien tam
+	addi $sp,$sp,-4
+	sw $t3,($sp)	#bien tam
+	addi $sp,$sp,-4
+	sw $t4,($sp)
+	#open file
+	li $v0,13
+	la $a0,fout
+	la $a1,0
+	la $a2,0
+	syscall
+	move $s0,$v0
+	#docfile
+	li $v0,14
+	move $a0,$s0
+	la $a0,tmp1
+	la $a2,10000
+	syscall
+	#closefile
+	li $v0,16
+	move $a0,$s0
+	syscall
+
+	#khoi tao truy xuat tu chuoi tmp1
+	li $t0,1 #dem '*'
+	li $t4,0 #dem so lan xuat
+	lw $t1,userLen
+	la $s3,userId
+XuatDanhSach.TruyXuat:
+	beq $t4,10,XuatDanhSach.end
+	beq $t4,$t1,XuatDanhSach.end
+	addi $t4,$t4,1
+	lw $t2,($s3) #lay ID
+	la $s1,tmp1
+	addi $s3,$s3,4
+	li $t0,1
+	li $t5,0
+	la $s2,Top10User
+XuatDanhSach.Duyet_str:
+	beq $t0,$t2,XuatDanhSach.LayChuoi
+XuatDanhSach.TiepTuc:
+	lb $t3,($s1)
+	beq $t3,$zero,XuatDanhSach.TruyXuat
+	addi $s1,$s1,1
+	beq $t3,'*',XuatDanhSach_Tangt0
+	j XuatDanhSach.TiepTuc
+XuatDanhSach_Tangt0:
+	addi $t0,$t0,1
+	j XuatDanhSach.Duyet_str
+XuatDanhSach.InThongTin: #in thong tin cuar user Id[i]
+	la $s2,Top10User
+XuatDanhSach.Loop:
+	lb $t3,($s2)
+	li $v0,11
+	move $a0,$t3
+	syscall
+	addi $t5,$t5,-1
+	addi $s2,$s2,1
+	bne $t5,0,XuatDanhSach.Loop
+	li $v0,11
+	la $a0,10
+	syscall
+	j XuatDanhSach.TruyXuat
+XuatDanhSach.LayChuoi:
+	lb $t3,($s1)
+	beq $t3,$zero,XuatDanhSach.end
+	beq $t3,'*',XuatDanhSach.InThongTin
+	sb $t3,($s2)
+	addi $s2,$s2,1
+	addi $s1,$s1,1
+	addi $t5,$t5,1
+	j XuatDanhSach.LayChuoi
+XuatDanhSach.end:
+	#cuoi thu tuc
+	lw $t4,($sp)
+	addi $sp,$sp,4
+	lw $t3,($sp)     
+	addi $sp,$sp,4
+	lw $t2,($sp)     
+	addi $sp,$sp,4
+	lw $t1,($sp)     
+	addi $sp,$sp,4
+	lw $t0,($sp)	
+	addi $sp,$sp,4
+	lw $s3,($sp)	
+	addi $sp,$sp,4
+	lw $s2,($sp)	
+	addi $sp,$sp,4
+	lw $s1,($sp)    
+	addi $sp,$sp,4
+	lw $s0,($sp)    
+	addi $sp,$sp,4
+	lw $ra,($sp)
+	addi $sp,$sp,4
+	jr $ra
+#=========================================Menu================================================
+XuatMenu:
+#dau thu tuc
+	addi $sp,$sp,-4
+	sw $ra,($sp)
+	addi $sp,$sp,-4
+	sw $s0,($sp)	
+#than thu tuc
+XuatMenu.Xuat:
+	#tb15:.asciiz "Ban co muon tiep tuc( Chon 1 neu dong y, nguoc lai chon 2 de thoat)"
+	#xuat thong bao
+	li $v0,4
+	la $a0,tb15
+	syscall
+	#xuat nhap chon
+	#chon: .asciiz "\nChon: "
+	li $v0,11
+	la $a0,10
+	syscall
+	li $v0,4
+	la $a0,chon
+	syscall
+	#nhap chon
+	li $v0,5
+	syscall
+	move $s0,$v0
+	beq $s0,1,XuatMenu.RandomQuestion
+	beq $s0,2,XuatMenu.Exit
+	j XuatMenu.NhapSai
+XuatMenu.RandomQuestion:
+	j RandomQuestion
+XuatMenu.Exit:
+	li $v0,10
+	syscall
+XuatMenu.NhapSai:
+	#tb6: .asciiz "Ban da nhap sai, vui long chon lai\n"
+	li $v0,4
+	la $a0,tb6
+	syscall
+	j XuatMenu.Nhap
+#cuoi thu tuc
+	lw $s0,($sp)	
+	addi $sp,$sp,4
+	lw $ra,($sp)
+	addi $sp,$sp,4
+	jr $ra
+	
